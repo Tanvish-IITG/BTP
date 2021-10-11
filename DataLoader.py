@@ -70,7 +70,7 @@ class DatasetSegmentation(data.Dataset):
             data_tensor = torch.cat([img,label],0)
         if self.transform:
             data_tensor = self.transform(data_tensor)
-        return data_tensor[0:3], data_tensor[3]
+        return data_tensor[0:3], data_tensor[3].type(torch.long)
 
     def __len__(self):
         return len(self.img_files)

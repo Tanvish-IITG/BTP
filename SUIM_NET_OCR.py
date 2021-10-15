@@ -199,9 +199,10 @@ class SUIM_OCR(torch.nn.Module):
 
 
 if __name__ == "__main__":
-    model = SUIM_OCR(3,8)
+    model = SUIM_OCR()
     t = torch.zeros((1,3,256,256))
     ans = model(t)
+    torchsummary(model,(1,3,256,256))
 
     # trainDataset = DatasetSegmentation(file_path,"images","masks",transformSeg)
 

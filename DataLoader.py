@@ -33,7 +33,7 @@ def splitchannel(img,shape):
 def combinechannel(img):
     
     
-    return (img[0,:,:] + 2*img[1,:,:] + 4*img[1,:,:]).unsqueeze(0)
+    return (img[0,:,:] + 2*img[1,:,:] + 4*img[2,:,:]).unsqueeze(0)
 
 
 
